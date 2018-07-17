@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.vsplatforma.evt85.csvPrint.controller.SelectController">
+   <children>
+      <HBox fx:id="changeDate">
+          <children>
+              <ComboBox fx:id="selYear" onAction="#yearUpdate">
+                  <HBox.margin>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+              </ComboBox>
+              <ComboBox fx:id="selMonth" onAction="#monthUpdate">
+                  <HBox.margin>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+              </ComboBox>
+              <ComboBox fx:id="selDay" onAction="#dayUpdate">
+                  <HBox.margin>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+              </ComboBox>
+          </children>
+      </HBox>
+      <ScrollPane fx:id="scrollBox" prefHeight="295.0" prefWidth="331.0">
+         <content>
+            <VBox fx:id="contentBox" />
+         </content>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ScrollPane>
+   </children>
+</VBox>
